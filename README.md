@@ -18,7 +18,47 @@ just by the programmer, but by the IDE. It can give argument hints, link to defi
 
 Well, enough abstract talk. Let's dive right in to the power of JSDocs, the system for documenting JavaScript.
 
-## Describe a function
+## Describe something
+
+What are comments for? Describing code. Comments can be used to explain what something does.
+
+```js
+// Prints "Hello world!" to the console
+console.log("Hello world!")
+```
+
+Quite simple and straightforward, but now anyone who is reading this code, even if they aren't fluent in JavaScript, can
+get a feel for what the line `console.log("Hello world!")` does.
+
+If an extended or inline explanation is needed, `/*` and `*/` can be used instead
+
+```js
+// A list of the numbers 1-5
+const list = [1, 2, 3, 4, 5]
+
+/*
+This finds the squares of all even numbers in two steps
+  1. It filters out all odd numbers
+  2. It squares all of the numbers that remain
+ */
+const evenSquares = list.filter(num => num % 2 === 0).map(num => num * num)
+```
+
+These comments are pretty helpful, as some of the code may not be super clear. However, they are even more useful when
+used in an IDE such as WebStorm. Try opening a new JavaScript file in WebStorm and paste this code in. Then, hover your
+mouse over `list` and `evenSquares` in the code. What do you notice?
+
+When your string hovers over the identifier, it brings up a popup that has not just the name of the variable, but also
+the text that we wrote in the comments!
+
+![Includes comments A](images/includes-comments-a.png)
+
+This popup can be seen anywhere that the identifier is referenced.
+
+![Includes comments B](images/includes-comments-b.png)
+
+So you don't need to worry about going back to the original comment every time that you forget what the variable is. You
+can see the notes you left just by hovering over it! Isn't that convenient?
 
 ## Thoughts
 
@@ -41,3 +81,5 @@ Examples
   * Add type prompts
   * Type checking
   * More complicated types
+
+Note: WebStorm can automatically generate docs for already written functions
