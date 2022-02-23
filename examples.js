@@ -42,6 +42,8 @@ function firstLetter(input) {
     return input[0]
 }
 
+console.log(firstLetter("hey"))
+
 /**
  * Parses two integers and adds them together.
  *
@@ -54,6 +56,7 @@ function parseAndAdd(valA, valB) {
     const valBInt = parseInt(valB)
     return valAInt + valBInt
 }
+
 
 /**
  * @type {string}
@@ -131,12 +134,6 @@ function addInts(a, b) {
 console.log(addInts("1", "2"))
 
 
-
-
-
-
-
-
 /**
  * Add a class to the list
  *
@@ -184,15 +181,8 @@ const configB = new ApiConfig()
 
 getPersonId(configA)
 
-
-
-
-
-
-
-
-
 console.log(configB)
+
 
 /**
  * @param s {string}
@@ -200,37 +190,13 @@ console.log(configB)
 const foo = s => console.log(s)
 
 /**
- * @type {number}
- */
-const bar = 1
-
-/**
  * @type {string}
  */
-const baz = "abc"
+const bar = "abc"
 
-foo(baz)
+/**
+ * @type {number}
+ */
+const baz = 1
 
-
-
-
-
-
-
-
-
-console.log(firstLetter("hey"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+foo(bar)

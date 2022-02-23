@@ -204,7 +204,7 @@ const myName = "John Doe"
 This type information allows the IDE to help you in a couple different ways that we will discuss, but first, let's talk
 about what types are valid.
 
-#### Types
+### Types
 
 The syntax that you can use to express types is very powerful, since it corresponds to the TypeScript type system.
 However, in this intro, we will only be covering a small subset of the type system. If you want to read more, go to
@@ -309,8 +309,8 @@ function stringToList(s) {
 
 ### Type Checking
 
-Now that we've established the way to insert type annotations in your code, we can explore the different tools that the
-WebStorm IDE provides based on these type annotations. One really useful tool is soft type checking!
+Now that we've established the way to insert type annotations in your code, we can explore a tool that the WebStorm IDE
+provides based on these type annotations: type checking!
 
 Vanilla JavaScript is dynamically-typed, which means that type checking happens while the program is running. In other
 words, JavaScript doesn't check whether an object has a function until it needs it. This can be convenient for things
@@ -374,60 +374,14 @@ objects being passed around get more complex. A few examples follow.
 
 <br>
 
-### Autocomplete
+## Conclusion
 
-## Thoughts
+Type annotations add a lot of power to the IDE. The more you comment your code, the easier it becomes to write more! So
+take advantage of the amazing tooling that we have at our fingertips. It will make your life so much easier.
 
------
-### `@param`
-And we can make this even more useful by adding types to our annotations. We expect both start and stop to be numbers,
-so we can add the type `number` in braces right after the parameter name.
-
-```js
-/**
- * ...
- * @param start {number} - the first number in the range
- * @param stop {number} - the last number in the range
- */
-```
-
-Try it in your own code! Observe how the popup has changed again.
-
-Notice how in the popup, in the function definition, it now lists the type for each parameter. It also lists the type
-within the code itself.
-
-![Typed param tag](images/param-tag-b.png)
-
-Also note that whenever you use the function, it now gives you the type of the parameter directly in the prompt.
-
-![Prompt typed param](images/param-tag-c.png)
-
-*Note: a more detailed treatment of what types are valid will be found later in this intro*
-
------
-
-Tags:
-  * @type
-  * @param
-  * @returns
-
-Types:
-  * primitives (`string`, `number`, `null`, `undefined`, etc.)
-  * objects (`{a: string, b: number}`)
-  * optionals (`string?`)
-  * functions (`function(string): number`)
-  * disjoint unions (`string | boolean`)
-  * arrays (`string[]`)
-  * maps (`{[key: string]: number}`)
-  * classes (`MyClass`)
-  * `@typedef`
-  * "string" type (`"a" | "b"`)
-
-Examples
-  * Describe a function
-  * Add type prompts
-  * Type checking
-  * More complicated types
-  * first letter -> option
-
-Note: WebStorm can automatically generate docs for already written functions
+There's lots more out there to discover, if you're interested. From optional parameters to optional object fields to
+custom type definitions, the type system can do so much. If you want to learn more, the following are a couple links to
+explain more:
+  * [A more in depth dive in types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+  * [Type checking in JavaScript Files](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)
+  * [More JSDoc Tags](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)
